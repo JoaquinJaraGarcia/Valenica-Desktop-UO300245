@@ -85,11 +85,11 @@ main section embed {
     max-width: 100%;
     height: auto;
 }
-
 /* Especificidad: 0,0,2 */
 main section {
     overflow-x: auto;
 }
+
 
 /* Media Query para pantallas a partir de 768px (Tablets y Escritorio) */
 @media (min-width: 768px) {
@@ -108,7 +108,7 @@ main section {
     }
 
     /* Especificidad: 0,1,2 */
-    main section:first-of-type {
+    main section{
         grid-column: 1 / -1;
     }
 }
