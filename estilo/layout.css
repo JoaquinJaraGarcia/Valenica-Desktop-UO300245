@@ -1,0 +1,107 @@
+/* Especificidad: 0,0,1 */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    place-items: center;
+}
+
+/* Especificidad: 0,0,1 */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+/* Especificidad: 0,0,1 */
+nav {
+    width: 100%;
+}
+
+/* Especificidad: 0,0,2 */
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+}
+
+/* Especificidad: 0,0,4 */
+nav ul li a {
+    display: block;
+    padding: 10px 20px;
+}
+
+/* Especificidad: 0,0,1 */
+main {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Especificidad: 0,0,1 */
+section{
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-top: 4px solid #ff6600;
+    
+}
+/* Especificidad: 0,0,1 */
+form {
+    text-align: center;
+}
+
+/* Especificidad: 0,0,1 */
+table {
+    width: 100%;
+}
+
+/* Especificidad: 0,0,2 */
+table th, table td {
+    padding: 12px;
+    text-align: left;
+}
+
+main section article {
+    width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+}
+
+main section article ul li a {
+    word-break: break-all; 
+}
+
+
+/* Media Query para pantallas a partir de 768px (Tablets y Escritorio) */
+@media (min-width: 768px) {
+    /* Especificidad: 0,0,2 */
+    nav ul {
+        /* Advertencia W3C: Redefinición por media query */
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    /* Especificidad: 0,0,1 */
+    main {
+        /* Advertencia W3C: Redefinición por media query */
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Especificidad: 0,0,2 */
+    main section:first-of-type {
+        grid-column: 1 / -1;
+    }
+}

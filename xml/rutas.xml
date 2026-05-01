@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rutas SYSTEM "rutas.dtd">
+<rutas>
+    <ruta>
+        <nombre>Centro Histórico de Valencia</nombre>
+        <tipo>Arquitectura y monumentos</tipo>
+        <transporte>A pie</transporte>
+        <fechaInicio>2024-05-10</fechaInicio>
+        <horaInicio>10:00:00</horaInicio>
+        <duracion>4 horas</duracion>
+        <agencia>Valencia Tours</agencia>
+        <descripcion>Recorrido por los principales monumentos del corazón de la ciudad.</descripcion>
+        <personasAdecuadas>Todas las edades</personasAdecuadas>
+        <lugarInicio>Torres de Serranos</lugarInicio>
+        <direccionInicio>Plaza de los Fueros s/n</direccionInicio>
+        <coordenadasInicio>
+            <longitud>-0.3756</longitud>
+            <latitud>39.4791</latitud>
+            <altitud>15</altitud>
+        </coordenadasInicio>
+        <referencias>
+            <referencia>https://www.visitvalencia.com/</referencia>
+            <referencia>https://es.wikipedia.org/wiki/Ciutat_Vella_(Valencia)</referencia>
+            <referencia>https://www.comunidad.madrid/no_usar_referencia_falsa</referencia>
+        </referencias> 
+        <recomendacion>9</recomendacion>
+        <hitos>
+            <hito>
+                <nombreHito>Torres de Serranos</nombreHito>
+                <descripcionHito>Antigua puerta de la muralla cristiana.</descripcionHito>
+                <coordenadasHito>
+                    <longitud>-0.3759362</longitud>
+                    <latitud>39.4794567</latitud>
+                    <altitud>14</altitud>
+                </coordenadasHito>
+                <distancia unidades="metros">0</distancia>
+                <galeriaFotografias>
+                    <fotografia>serranos.jpg</fotografia>
+                </galeriaFotografias>
+            </hito>
+            <hito>
+                <nombreHito>Plaza de la Virgen</nombreHito>
+                <descripcionHito>Centro neurálgico con la fuente del Turia.</descripcionHito>
+                <coordenadasHito>
+                    <longitud>-0.3751</longitud>
+                    <latitud>39.4764</latitud>
+                    <altitud>16</altitud>
+                </coordenadasHito>
+                <distancia unidades="metros">350</distancia>
+                <galeriaFotografias>
+                    <fotografia>plaza_virgen.jpg</fotografia>
+                    <fotografia>fuente_turia.jpg</fotografia>
+                </galeriaFotografias>
+            </hito>
+            <hito>
+                <nombreHito>Catedral y Miguelete</nombreHito>
+                <descripcionHito>Templo principal y su famoso campanario.</descripcionHito>
+                <coordenadasHito>
+                    <longitud>-0.3750</longitud>
+                    <latitud>39.4754</latitud>
+                    <altitud>16</altitud>
+                </coordenadasHito>
+                <distancia unidades="metros">150</distancia>
+                <galeriaFotografias>
+                    <fotografia>catedral.jpg</fotografia>
+                </galeriaFotografias>
+                <galeriaVideos>
+                    <video>campanas.mp4</video>
+                </galeriaVideos>
+            </hito>
+            <hito>
+                <nombreHito>La Lonja de la Seda</nombreHito>
+                <descripcionHito>Obra maestra del gótico civil.</descripcionHito>
+                <coordenadasHito>
+                    <longitud>-0.3783</longitud>
+                    <latitud>39.4744</latitud>
+                    <altitud>14</altitud>
+                </coordenadasHito>
+                <distancia unidades="metros">400</distancia>
+                <galeriaFotografias>
+                    <fotografia>lonja_exterior.jpg</fotografia>
+                    <fotografia>salon_columnas.jpg</fotografia>
+                </galeriaFotografias>
+            </hito>
+            <hito>
+                <nombreHito>Mercado Central</nombreHito>
+                <descripcionHito>Gran mercado de arquitectura modernista.</descripcionHito>
+                <coordenadasHito>
+                    <longitud>-0.3789</longitud>
+                    <latitud>39.4737</latitud>
+                    <altitud>14</altitud>
+                </coordenadasHito>
+                <distancia unidades="metros">200</distancia>
+                <galeriaFotografias>
+                    <fotografia>mercado_cupula.jpg</fotografia>
+                </galeriaFotografias>
+            </hito>
+        </hitos>
+        <planimetria>ruta1_planimetria.kml</planimetria>
+        <altimetria>ruta1_altimetria.svg</altimetria>
+    </ruta>
+
+    <ruta>
+        <nombre>Parque Natural de L'Albufera</nombre>
+        <tipo>Paisajística</tipo>
+        <transporte>Bicicleta</transporte>
+        <duracion>1 día</duracion>
+        <agencia>NaturaTur</agencia>
+        <descripcion>Ruta ecológica por la dehesa, el lago y los arrozales.</descripcion>
+        <personasAdecuadas>Personas en buena forma física</personasAdecuadas>
+        <lugarInicio>Pueblo de El Saler</lugarInicio>
+        <direccionInicio>Avenida de los Pinares</direccionInicio>
+        <coordenadasInicio>
+            <longitud>-0.315953</longitud>
+            <latitud>39.353736</latitud>
+            <altitud>1.6</altitud>
+        </coordenadasInicio>
+        <referencias>
+            <referencia>https://parquesnaturales.gva.es/es/web/pn-albufera</referencia>
+            <referencia>https://es.wikipedia.org/wiki/Parque_natural_de_la_Albufera</referencia>
+            <referencia>https://www.valenciabona.es/albufera/</referencia>
+        </referencias>
+        <recomendacion>10</recomendacion>
+        <hitos>
+            <hito>
+                <nombreHito>Dehesa del Saler</nombreHito>
+                <descripcionHito>Bosque de pinos junto al mar.</descripcionHito>
+                <coordenadasHito>
+                    <longitud>-0.315981</longitud>
+                    <latitud>39.340053</latitud>
+                    <altitud>2.9</altitud>
+                </coordenadasHito>
+                <distancia unidades="kilometros">1.5</distancia>
+                <galeriaFotografias>
+                    <fotografia>dehesa.jpg</fotografia>
+                </galeriaFotografias>
+            </hito>
+            <hito>
+                <nombreHito>Gola de Pujol</nombreHito>
+                <descripcionHito>Canal que conecta el lago con el mar Mediterráneo.</descripcionHito>
+                <coordenadasHito>
+                    <longitud>-0.316900</longitud>
+                    <latitud>39.348419</latitud>
+                    <altitud>2.25</altitud>
+                </coordenadasHito>
+                <distancia unidades="kilometros">3</distancia>
+                <galeriaFotografias>
+                    <fotografia>gola_pujol.jpg</fotografia>
+                </galeriaFotografias>
+            </hito>
+            <hito>
+                <nombreHito>Mirador de L'Albufera</nombreHito>
+                <descripcionHito>Punto de observación de aves y atardeceres.</descripcionHito>
+                <coordenadasHito>
+                    <longitud>-0.322653</longitud>
+                    <latitud>39.347508</latitud>
+                    <altitud>1.97</altitud>
+                </coordenadasHito>
+                <distancia unidades="kilometros">2.5</distancia>
+                <galeriaFotografias>
+                    <fotografia>mirador.jpg</fotografia>
+                    <fotografia>flamencos.jpg</fotografia>
+                </galeriaFotografias>
+                <galeriaVideos>
+                    <video>atardecer.mp4</video>
+                </galeriaVideos>
+            </hito>
+            <hito>
+                <nombreHito>El Palmar</nombreHito>
+                <descripcionHito>Pueblo tradicional de pescadores y arroceros.</descripcionHito>
+                <coordenadasHito>
+                    <longitud>-0.311239</longitud>
+                    <latitud>39.326317</latitud>
+                    <altitud>4.1</altitud>
+                </coordenadasHito>
+                <distancia unidades="kilometros">4</distancia>
+                <galeriaFotografias>
+                    <fotografia>palmar.jpg</fotografia>
+                </galeriaFotografias>
+            </hito>
+            <hito>
+                <nombreHito>Barraca Tradicional</nombreHito>
+                <descripcionHito>Vivienda histórica de la huerta valenciana.</descripcionHito>
+                <coordenadasHito>
+                    <longitud>-0.309783</longitud>
+                    <latitud>39.345625</latitud>
+                    <altitud>0.93</altitud>
+                </coordenadasHito>
+                <distancia unidades="metros">500</distancia>
+                <galeriaFotografias>
+                    <fotografia>barraca.jpg</fotografia>
+                </galeriaFotografias>
+            </hito>
+        </hitos>
+        <planimetria>ruta2_planimetria.kml</planimetria>
+        <altimetria>ruta2_altimetria.svg</altimetria>
+    </ruta>
+
+    <ruta>
+        <nombre>Ruta del Agua de Chelva</nombre>
+        <tipo>Senderismo</tipo>
+        <transporte>A pie</transporte>
+        <fechaInicio>2024-06-01</fechaInicio>
+        <horaInicio>12:00:00</horaInicio>
+        <duracion>3 horas</duracion>
+        <agencia>Sin agencia</agencia>
+        <descripcion>Recorrido circular combinando cultura y naturaleza junto al río Tuéjar.</descripcion>
+        <personasAdecuadas>Se puede ir con niños</personasAdecuadas>
+        <lugarInicio>Plaza Mayor de Chelva</lugarInicio>
+        <direccionInicio>Plaza Mayor, 1</direccionInicio>
+        <coordenadasInicio>
+            <longitud>-0.9975420</longitud>
+            <latitud>39.7473398</latitud>
+            <altitud>473</altitud>
+        </coordenadasInicio>
+        <referencias>
+            <referencia>https://www.chelva.es/ruta-del-agua/</referencia>
+            <referencia>https://es.wikipedia.org/wiki/Chelva</referencia>
+            <referencia>https://es.wikiloc.com/rutas/chelva-agua</referencia>
+        </referencias>
+        <recomendacion>8</recomendacion>
+        <hitos>
+            <hito>
+                <nombreHito>Barrio Árabe de Benacacira</nombreHito>
+                <descripcionHito>Calles estrechas de herencia musulmana.</descripcionHito>
+                <coordenadasHito>
+                    <longitud>-0.9992154</longitud>
+                    <latitud>39.7479258</latitud>
+                    <altitud>445</altitud>
+                </coordenadasHito>
+                <distancia unidades="metros">200</distancia>
+                <galeriaFotografias>
+                    <fotografia>barrio_arabe.jpg</fotografia>
+                </galeriaFotografias>
+            </hito>
+            <hito>
+                <nombreHito>Fuente del Cuco</nombreHito>
+                <descripcionHito>Zona recreativa al inicio del sendero del río.</descripcionHito>
+                <coordenadasHito>
+                    <longitud>-1.0058809</longitud>
+                    <latitud>39.7461166</latitud>
+                    <altitud>472</altitud>
+                </coordenadasHito>
+                <distancia unidades="metros">800</distancia>
+                <galeriaFotografias>
+                    <fotografia>fuente_cuco.jpg</fotografia>
+                </galeriaFotografias>
+            </hito>
+            <hito>
+                <nombreHito>La Playeta</nombreHito>
+                <descripcionHito>Zona de baño natural en el río.</descripcionHito>
+                <coordenadasHito>
+                    <longitud>-1.0094426</longitud>
+                    <latitud>39.7461166</latitud>
+                    <altitud>413</altitud>
+                </coordenadasHito>
+                <distancia unidades="metros">600</distancia>
+                <galeriaFotografias>
+                    <fotografia>playeta.jpg</fotografia>
+                </galeriaFotografias>
+            </hito>
+            <hito>
+                <nombreHito>Paso de Olinches</nombreHito>
+                <descripcionHito>Túnel excavado en la roca junto al cauce.</descripcionHito>
+                <coordenadasHito>
+                    <longitud>-1.0095775</longitud>
+                    <latitud>39.7470936</latitud>
+                    <altitud>437</altitud>
+                </coordenadasHito>
+                <distancia unidades="metros">900</distancia>
+                <galeriaFotografias>
+                    <fotografia>tunel_olinches.jpg</fotografia>
+                </galeriaFotografias>
+                <galeriaVideos>
+                    <video>cruzando_tunel.mp4</video>
+                </galeriaVideos>
+            </hito>
+            <hito>
+                <nombreHito>Molino Puerto</nombreHito>
+                <descripcionHito>Restos de un antiguo molino harinero.</descripcionHito>
+                <coordenadasHito>
+                    <longitud>-0.9985</longitud>
+                    <latitud>39.7460</latitud>
+                    <altitud>420</altitud>
+                </coordenadasHito>
+                <distancia unidades="kilometros">1.2</distancia>
+                <galeriaFotografias>
+                    <fotografia>molino.jpg</fotografia>
+                </galeriaFotografias>
+            </hito>
+        </hitos>
+        <planimetria>ruta3_planimetria.kml</planimetria>
+        <altimetria>ruta3_altimetria.svg</altimetria>
+    </ruta>
+</rutas>

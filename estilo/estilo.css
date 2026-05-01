@@ -1,0 +1,117 @@
+
+/*Estilos generales del proyecto Valencia-Desktop*/
+/* Especificidad: 0,0,2 */
+h1 a {
+  color: #fff;    
+  background-color:#ff3333; 
+  text-transform: uppercase;
+  padding: 2em; 
+  display: block;
+  text-align: center;     
+  }
+
+/* Especificidad: 0,0,1 */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1a1a1a;
+    background-color: #f4f4f9;
+    line-height: 1.6;
+}
+
+/* Especificidad: 0,0,1 */
+header {
+    background-color: #003366;
+    color: #ffffff;
+}
+/* Especificidad: 0,0,2 */
+header + p {
+  text-align: center;
+}
+/* Especificidad: 0,0,2 */
+header h1 {
+    /* Advertencia W3C: Color de fondo heredado de header */
+    text-shadow: 1px 1px 2px #000000;
+}
+
+/* Especificidad: 0,0,1 */
+nav {
+    background-color: #002244;
+}
+
+/* Especificidad: 0,0,3 */
+nav ul li {
+    list-style-type: none;
+}
+
+/* Especificidad: 0,0,4 */
+nav ul li a {
+    color: #ffffff;
+    /* Advertencia W3C: Color de fondo heredado de nav */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Especificidad: 0,1,4 */
+nav ul li a:hover {
+    color: #ffcc00;
+    /* Advertencia W3C: Color de fondo heredado de nav */
+}
+
+/* Especificidad: 0,0,1 */
+main {
+    /* Advertencia W3C: Color y background heredados de body */
+    border-top: 4px solid #003366;
+}
+
+/* Especificidad: 0,0,2 */
+main h2 {
+    color: #003366;
+    /* Advertencia W3C: Color de fondo heredado de body */
+    border-bottom: 2px solid #cccccc;
+}
+/* Especificidad: 0,0,2 */
+main h3 {
+    color: #003366;
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+    padding-left: 10px;
+    border-left: 4px solid #ff6600;
+}
+
+/* Especificidad: 0,0,2 */
+main h4 {
+    color: #1a1a1a;
+    font-size: 1.2rem;
+    margin-top: 1.2rem;
+    font-weight: bold;
+    border-bottom: 1px dashed #cccccc;
+    padding-bottom: 5px;
+}
+
+
+/* Especificidad: 0,0,1 */
+table {
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+/* Especificidad: 0,0,2 */
+table th {
+    background-color: #003366;
+    color: #ffffff;
+    border: 1px solid #002244;
+}
+
+/* Especificidad: 0,0,2 */
+table td {
+    /* Advertencia W3C: Color heredado de body */
+    border: 1px solid #cccccc;
+}
+
+
+/* Especificidad: 0,1,1 */
+a.activo {
+  font-weight: bold;
+  color: #ff6600;
+  border-bottom: 2px solid #ff6600;
+}

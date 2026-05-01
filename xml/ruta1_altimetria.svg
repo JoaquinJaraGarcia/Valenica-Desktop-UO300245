@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1200" height="500">
+  <rect x="0" y="0" width="1200" height="500" fill="white" />
+  <line x1="60" y1="440" x2="1140" y2="440" stroke="black" stroke-width="2" />
+  <line x1="60" y1="60" x2="60" y2="440" stroke="black" stroke-width="2" />
+  <polyline points="60.00,440.00 403.64,60.00 550.91,60.00 943.64,440.00 1140.00,440.00 1140.00,440.00 60.00,440.00" stroke="steelblue" fill="#cfe8ff" stroke-width="2" />
+  <polyline points="60.00,440.00 403.64,60.00 550.91,60.00 943.64,440.00 1140.00,440.00" stroke="navy" fill="none" stroke-width="2" />
+  <circle cx="60.0" cy="440.0" r="4" fill="red" />
+  <text x="60.0" y="428.0" fill="black" font-family="Verdana" font-size="12" text-anchor="middle">Torres de Serranos</text>
+  <text x="65.0" y="455.0" fill="black" transform="rotate(-90 65.0 455.0)" font-family="Verdana" font-size="10" text-anchor="end">14.0 m</text>
+  <circle cx="403.6363636363636" cy="60.0" r="4" fill="red" />
+  <text x="403.6363636363636" y="48.0" fill="black" font-family="Verdana" font-size="12" text-anchor="middle">Plaza de la Virgen</text>
+  <text x="408.6363636363636" y="75.0" fill="black" transform="rotate(-90 408.6363636363636 75.0)" font-family="Verdana" font-size="10" text-anchor="end">16.0 m</text>
+  <circle cx="550.9090909090909" cy="60.0" r="4" fill="red" />
+  <text x="550.9090909090909" y="48.0" fill="black" font-family="Verdana" font-size="12" text-anchor="middle">Catedral y Miguelete</text>
+  <text x="555.9090909090909" y="75.0" fill="black" transform="rotate(-90 555.9090909090909 75.0)" font-family="Verdana" font-size="10" text-anchor="end">16.0 m</text>
+  <circle cx="943.6363636363637" cy="440.0" r="4" fill="red" />
+  <text x="943.6363636363637" y="428.0" fill="black" font-family="Verdana" font-size="12" text-anchor="middle">La Lonja de la Seda</text>
+  <text x="948.6363636363637" y="455.0" fill="black" transform="rotate(-90 948.6363636363637 455.0)" font-family="Verdana" font-size="10" text-anchor="end">14.0 m</text>
+  <circle cx="1140.0" cy="440.0" r="4" fill="red" />
+  <text x="1140.0" y="428.0" fill="black" font-family="Verdana" font-size="12" text-anchor="middle">Mercado Central</text>
+  <text x="1145.0" y="455.0" fill="black" transform="rotate(-90 1145.0 455.0)" font-family="Verdana" font-size="10" text-anchor="end">14.0 m</text>
+  <text x="600.0" y="30" font-family="Verdana" font-size="20" text-anchor="middle">Centro Histórico de Valencia</text>
+  <text x="70" y="50" font-family="Verdana" font-size="14" text-anchor="start">Max: 16.0 m</text>
+  <text x="70" y="470" font-family="Verdana" font-size="14" text-anchor="start">Min: 14.0 m</text>
+  <text x="600.0" y="490" font-family="Verdana" font-size="14" text-anchor="middle">Distancia Total: 1100.00 m</text>
+</svg>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Joaquin Jara Garcia UO300245" />
+  <meta name="description" content="Informacion acerda de la gastronomia de la provincia" />
+  <meta name="keywords" content="comida,gastronomia, turismo, valencia" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="text/css" href="multimedia/favicon.PNG" />
+  <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+  <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
+  <title>Turismo-Valencia</title>
+</head>
+
+<body>
+  <header>
+     <h1><a href="index.html">Turismo Valencia</a></h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="gastronomia.html" class="activo">Gastronomía</a></li>
+        <li><a href="rutas.html">Rutas</a></li>
+        <li><a href="meteorologia.html">Meteorología</a></li>
+        <li><a href="juego.html">Juego</a></li>
+        <li><a href="reservas.php">Reservas</a></li>
+        <li><a href="ayuda.html">Ayuda</a></li>
+      </ul>
+    </nav>
+     
+     
+  </header>
+ <p>Estas en:<a href="index.html">INICIO</a> >> <strong>Gastronomia</strong></p>
+  <main>
+    <section>
+      <h2>Gastronomía</h2>
+      <p>La provincia de Valencia es mundialmente conocida por sus arroces, productos de la huerta y del mar.</p>
+    </section>
+
+    <section>
+      <h3>Platos Principales</h3>
+      <ul>
+        <li>Paella Valenciana
+          <ul>
+            <li>Arroz bomba</li>
+            <li>Pollo y conejo</li>
+            <li>Garrofón y bajoqueta</li>
+          </ul>
+        </li>
+        <li>Fideuà de Gandía</li>
+        <li>All i pebre de anguilas</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Dulces y Bebidas</h3>
+      <ol>
+        <li>Horchata de chufa con fartons</li>
+        <li>Buñuelos de calabaza</li>
+        <li>Coca de llanda</li>
+      </ol>
+    </section>
+
+    <section>
+      <h3>Vocabulario Gastronómico</h3>
+      <dl>
+        <dt>Socarrat</dt>
+        <dd>Capa de arroz tostado y crujiente que se forma en el fondo de la paella.</dd>
+        <dt>Paella</dt>
+        <dd>Recipiente de hierro ancho y con dos asas donde se cocina el plato homónimo.</dd>
+        <dt>Albufera</dt>
+        <dd>Laguna costera de donde se extrae el arroz y otros ingredientes tradicionales.</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h3>Tabla de Alérgenos</h3>
+      <table>
+        <caption>Principales platos y sus alérgenos</caption>
+        <tr>
+          <th scope="col">Plato Típico</th>
+          <th scope="col">Alérgenos</th>
+        </tr>
+        <tr>
+          <td>Fideuà</td>
+          <td>Gluten, Pescado y Crustáceos</td>
+        </tr>
+        <tr>
+          <td>Fartons</td>
+          <td>Gluten y Huevo</td>
+        </tr>
+        <tr>
+          <td>All i pebre</td>
+          <td>Pescado</td>
+        </tr>
+        <tr>
+          <td>Paella Valenciana</td>
+          <td>Ninguno</td>
+        </tr>
+      </table>
+    </section>
+
+    <section>
+      <h3>Galería Multimedia</h3>
+
+      <h4>Nuestra Paella</h4>
+      <picture>
+        <source media="(max-width: 600px)" srcset="multimedia/paella_movil.jpg" />
+        <source media="(min-width: 601px)" srcset="multimedia/paella_escritorio.jpg" />
+        <img src="multimedia/paella_escritorio.jpg" alt="Paella valenciana cocinada a leña." />
+      </picture>
+
+      <h4>Preparación del All i pebre</h4>
+      <video controls width="600">
+        <source src="multimedia/allipebre.mp4" type="video/mp4">
+        <source src="multimedia/allipebre.webm" type="video/webm">
+        Tu navegador no soporta la etiqueta de vídeo.
+      </video>
+
+      <h4>Sonido del chup-chup de la paella</h4>
+      <audio controls>
+        <source src="multimedia/cocinando.mp3" type="audio/mpeg">
+        <source src="multimedia/cocinando.ogg" type="audio/ogg">
+        Tu navegador no soporta la etiqueta de audio.
+      </audio>
+    </section>
+  </main>
+</body>
+
+
+
+
+
+</html>

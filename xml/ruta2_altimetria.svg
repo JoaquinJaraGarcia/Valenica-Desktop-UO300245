@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1200" height="500">
+  <rect x="0" y="0" width="1200" height="500" fill="white" />
+  <line x1="60" y1="440" x2="1140" y2="440" stroke="black" stroke-width="2" />
+  <line x1="60" y1="60" x2="60" y2="440" stroke="black" stroke-width="2" />
+  <polyline points="200.87,203.85 482.61,281.77 717.39,315.33 1093.04,60.00 1140.00,440.00 1140.00,440.00 200.87,440.00" stroke="steelblue" fill="#cfe8ff" stroke-width="2" />
+  <polyline points="200.87,203.85 482.61,281.77 717.39,315.33 1093.04,60.00 1140.00,440.00" stroke="navy" fill="none" stroke-width="2" />
+  <circle cx="200.8695652173913" cy="203.84858044164037" r="4" fill="red" />
+  <text x="200.8695652173913" y="191.84858044164037" fill="black" font-family="Verdana" font-size="12" text-anchor="middle">Dehesa del Saler</text>
+  <text x="205.8695652173913" y="218.84858044164037" fill="black" transform="rotate(-90 205.8695652173913 218.84858044164037)" font-family="Verdana" font-size="10" text-anchor="end">2.9 m</text>
+  <circle cx="482.60869565217394" cy="281.7665615141956" r="4" fill="red" />
+  <text x="482.60869565217394" y="269.7665615141956" fill="black" font-family="Verdana" font-size="12" text-anchor="middle">Gola de Pujol</text>
+  <text x="487.60869565217394" y="296.7665615141956" fill="black" transform="rotate(-90 487.60869565217394 296.7665615141956)" font-family="Verdana" font-size="10" text-anchor="end">2.25 m</text>
+  <circle cx="717.3913043478261" cy="315.3312302839117" r="4" fill="red" />
+  <text x="717.3913043478261" y="303.3312302839117" fill="black" font-family="Verdana" font-size="12" text-anchor="middle">Mirador de L'Albufera</text>
+  <text x="722.3913043478261" y="330.3312302839117" fill="black" transform="rotate(-90 722.3913043478261 330.3312302839117)" font-family="Verdana" font-size="10" text-anchor="end">1.97 m</text>
+  <circle cx="1093.0434782608695" cy="60.0" r="4" fill="red" />
+  <text x="1093.0434782608695" y="48.0" fill="black" font-family="Verdana" font-size="12" text-anchor="middle">El Palmar</text>
+  <text x="1098.0434782608695" y="75.0" fill="black" transform="rotate(-90 1098.0434782608695 75.0)" font-family="Verdana" font-size="10" text-anchor="end">4.1 m</text>
+  <circle cx="1140.0" cy="440.0" r="4" fill="red" />
+  <text x="1140.0" y="428.0" fill="black" font-family="Verdana" font-size="12" text-anchor="middle">Barraca Tradicional</text>
+  <text x="1145.0" y="455.0" fill="black" transform="rotate(-90 1145.0 455.0)" font-family="Verdana" font-size="10" text-anchor="end">0.93 m</text>
+  <text x="600.0" y="30" font-family="Verdana" font-size="20" text-anchor="middle">Parque Natural de L'Albufera</text>
+  <text x="70" y="50" font-family="Verdana" font-size="14" text-anchor="start">Max: 4.1 m</text>
+  <text x="70" y="470" font-family="Verdana" font-size="14" text-anchor="start">Min: 0.9 m</text>
+  <text x="600.0" y="490" font-family="Verdana" font-size="14" text-anchor="middle">Distancia Total: 11500.00 m</text>
+</svg>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Joaquin Jara Garcia UO300245" />
+  <meta name="description" content="Indice de la pagina web de turismo de Valencia" />
+  <meta name="keywords" content="inicio, necesidad, turismo, valencia" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="text/css" href="multimedia/favicon.PNG" />
+  <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+  <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="js/carrusel.js"></script>
+  <script src="js/noticias.js"></script>
+  <title>Turismo-Valencia</title>
+</head>
+
+<body>
+
+  <header>
+    <h1><a href="index.html">Turismo Valencia</a></h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="activo">Inicio</a></li>
+        <li><a href="gastronomia.html">Gastronomía</a></li>
+        <li><a href="rutas.html">Rutas</a></li>
+        <li><a href="meteorologia.html">Meteorología</a></li>
+        <li><a href="juego.html">Juego</a></li>
+        <li><a href="reservas.php">Reservas</a></li>
+        <li><a href="ayuda.html">Ayuda</a></li>
+      </ul>
+    </nav>
+  </header>
+  <p>Estas en: <strong><a href="index.html">INICIO</a></strong></p>
+  <main>
+    <h2>Galería de Imágenes de Valencia</h2>
+    
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const carrusel = new Carrusel();
+        carrusel.mostrarFotografias(document.querySelector("h2:nth-of-type(1)"));
+        const noticias = new Noticias("Valencia");
+        noticias.iniciarNoticias();
+      });
+    </script>
+  </main>
+</body>
+
+
+
+
+
+</html>

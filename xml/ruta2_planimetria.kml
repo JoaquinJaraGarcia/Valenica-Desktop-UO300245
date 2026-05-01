@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+    <name>Parque Natural de L'Albufera</name>
+    <Placemark>
+        <LineString>
+            <extrude>1</extrude>
+            <tessellate>1</tessellate>
+            <coordinates>
+-0.315981,39.340053,2.9
+-0.316900,39.348419,2.25
+-0.322653,39.347508,1.97
+-0.311239,39.326317,4.1
+-0.309783,39.345625,0.93
+            </coordinates>
+        </LineString>
+    </Placemark>
+</Document>
+</kml>

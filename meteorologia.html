@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Joaquin Jara Garcia UO300245" />
+  <meta name="description" content="Informacion acerda de la meteorologia de la provincia" />
+  <meta name="keywords" content="metereologia, tiempo, lluvia, valencia" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="text/css" href="multimedia/favicon.PNG" />
+  <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+  <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/ciudad.js"></script>
+  <title>Turismo-Valencia</title>
+</head>
+
+<body>
+  
+  <header>
+     <h1><a href="index.html">Turismo Valencia</a></h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="gastronomia.html">Gastronomía</a></li>
+      <li><a href="rutas.html">Rutas</a></li>
+      <li><a href="meteorologia.html" class="activo">Meteorología</a></li>
+      <li><a href="juego.html">Juego</a></li>
+      <li><a href="reservas.php">Reservas</a></li>
+      <li><a href="ayuda.html">Ayuda</a></li>
+    </ul>
+  </nav>
+</header>
+ <p>Estas en: <a href="index.html">INICIO</a> >> <strong>Meteorología</strong></p>
+<main>
+  <section>
+        <h2>Meteorología Actual</h2>
+    </section>
+
+    <section>
+        <h2>Previsión para los próximos días</h2>
+    </section>
+  </main>
+
+
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const valencia = new Ciudad("Valencia",  0.3774,39.4697);
+      valencia.mostrarEnHTML("section:nth-of-type(1) ", "section:nth-of-type(2) ");
+    });  </script>
+</body>
+
+
+
+
+
+</html>

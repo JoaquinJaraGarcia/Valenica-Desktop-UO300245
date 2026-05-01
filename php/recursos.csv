@@ -1,0 +1,6 @@
+id,tipo_id,nombre,descripcion,plazas_totales,precio,fecha_inicio,fecha_fin
+1,1,Visita guiada a la Catedral y el Santo Grial,Recorre la Catedral de Valencia con guia experto. Incluye capilla del Santo Caliz subida al Miguelete y Museo Catedralicio.,20,15.00,2026-06-01 10:00:00,2026-08-31 12:00:00
+2,5,Excursion en barca tradicional por La Albufera,Paseo en barca de madera por el lago de La Albufera. Avistamiento de aves y contemplacion del atardecer. Incluye guia naturalista.,12,28.00,2026-05-15 16:00:00,2026-10-15 20:00:00
+3,2,Ruta a pie por el Casco Historico: Barrios de la Ciudad,Paseo guiado de 3 horas por El Carmen La Xerea y el Mercado. Visita a la Lonja de la Seda y el Mercado Central.,25,12.00,2026-05-01 09:30:00,2026-10-31 12:30:00
+4,3,Cena de paella valenciana en barraca tradicional,Cena autentica en barraca del siglo XIX a orillas de La Albufera. Menu completo con paella y espectaculo de musica valenciana en vivo.,30,38.00,2026-06-01 20:30:00,2026-09-30 23:30:00
+5,4,Noche en hotel boutique 4* en la Ciudad de las Artes,Estancia con vistas al complejo de la Ciudad de las Artes. Incluye desayuno buffet acceso al spa y entrada para el Oceanografic.,10,125.00,2026-05-01 14:00:00,2026-12-31 12:00:00

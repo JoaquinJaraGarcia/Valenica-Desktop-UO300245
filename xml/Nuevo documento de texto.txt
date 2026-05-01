@@ -1,0 +1,84 @@
+import xml.etree.ElementTree as ET
+
+def generar_kml(nombre_ruta, coordenadas, archivo_salida):
+    kml_content = f"""<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+    <name>{nombre_ruta}</name>
+    <Placemark>
+        <LineString>
+            <extrude>1</extrude>
+            <tessellate>1</tessellate>
+            <coordinates>
+{coordenadas}
+            </coordinates>
+        </LineString>
+    </Placemark>
+</Document>
+</kml>"""
+    
+    with open(archivo_salida, 'w', encoding='utf-8') as f:
+        f.write(kml_content)
+
+def generar_svg(altitudes, distancias, archivo_salida):
+    ancho = 800
+    alto = 400
+    margen = 50
+    
+    max_alt = max(altitudes) if altitudes else 1
+    max_dist = sum(distancias) if sum(distancias) > 0 else 1
+    
+    puntos_svg = []
+    dist_acumulada = 0
+    
+    puntos_svg.append(f"{margen},{alto - margen}")
+    
+    for i in range(len(altitudes)):
+        dist_acumulada += distancias[i]
+        x = margen + (dist_acumulada / max_dist) * (ancho - 2 * margen)
+        y = (alto - margen) - (altitudes[i] / max_alt) * (alto - 2 * margen)
+        puntos_svg.append(f"{x},{y}")
+        
+    puntos_svg.append(f"{margen + (ancho - 2 * margen)},{alto - margen}")
+    puntos_svg.append(f"{margen},{alto - margen}")
+    
+    puntos_str = " ".join(puntos_svg)
+    
+    svg_content = f"""<?xml version="1.0" encoding="UTF-8" ?>
+<svg width="{ancho}" height="{alto}" xmlns="http://www.w3.org/2000/svg">
+    <polyline points="{puntos_str}" fill="lightblue" stroke="black" stroke-width="2"/>
+    <text x="{ancho/2}" y="{alto - 10}" text-anchor="middle">Distancia (escala horizontal)</text>
+    <text x="15" y="{alto/2}" transform="rotate(-90 15,{alto/2})" text-anchor="middle">Altitud (escala vertical)</text>
+</svg>"""
+
+    with open(archivo_salida, 'w', encoding='utf-8') as f:
+        f.write(svg_content)
+
+def procesar_xml(archivo_xml):
+    tree = ET.parse(archivo_xml)
+    root = tree.getroot()
+    
+    for idx, ruta in enumerate(root.findall('ruta')):
+        nombre_ruta = ruta.find('nombre').text
+        hitos = ruta.find('hitos').findall('hito')
+        
+        coords_kml = ""
+        altitudes = []
+        distancias = []
+        
+        for hito in hitos:
+            lon = hito.find('coordenadas/longitud').text
+            lat = hito.find('coordenadas/latitud').text
+            alt = hito.find('coordenadas/altitud').text
+            dist = float(hito.find('distanciaAnterior').text)
+            
+            coords_kml += f"{lon},{lat},{alt}\n"
+            altitudes.append(float(alt))
+            distancias.append(dist)
+            
+        num_ruta = idx + 1
+        generar_kml(nombre_ruta, coords_kml.strip(), f"ruta{num_ruta}_planimetria.kml")
+        generar_svg(altitudes, distancias, f"ruta{num_ruta}_altimetria.svg")
+
+if __name__ == "__main__":
+    procesar_xml('rutas.xml')

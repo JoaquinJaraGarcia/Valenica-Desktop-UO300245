@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1200" height="500">
+  <rect x="0" y="0" width="1200" height="500" fill="white" />
+  <line x1="60" y1="440" x2="1140" y2="440" stroke="black" stroke-width="2" />
+  <line x1="60" y1="60" x2="60" y2="440" stroke="black" stroke-width="2" />
+  <polyline points="118.38,233.90 351.89,60.00 527.03,440.00 789.73,285.42 1140.00,394.92 1140.00,440.00 118.38,440.00" stroke="steelblue" fill="#cfe8ff" stroke-width="2" />
+  <polyline points="118.38,233.90 351.89,60.00 527.03,440.00 789.73,285.42 1140.00,394.92" stroke="navy" fill="none" stroke-width="2" />
+  <circle cx="118.37837837837839" cy="233.89830508474577" r="4" fill="red" />
+  <text x="118.37837837837839" y="221.89830508474577" fill="black" font-family="Verdana" font-size="12" text-anchor="middle">Barrio Árabe de Benacacira</text>
+  <text x="123.37837837837839" y="248.89830508474577" fill="black" transform="rotate(-90 123.37837837837839 248.89830508474577)" font-family="Verdana" font-size="10" text-anchor="end">445.0 m</text>
+  <circle cx="351.89189189189193" cy="60.0" r="4" fill="red" />
+  <text x="351.89189189189193" y="48.0" fill="black" font-family="Verdana" font-size="12" text-anchor="middle">Fuente del Cuco</text>
+  <text x="356.89189189189193" y="75.0" fill="black" transform="rotate(-90 356.89189189189193 75.0)" font-family="Verdana" font-size="10" text-anchor="end">472.0 m</text>
+  <circle cx="527.0270270270271" cy="440.0" r="4" fill="red" />
+  <text x="527.0270270270271" y="428.0" fill="black" font-family="Verdana" font-size="12" text-anchor="middle">La Playeta</text>
+  <text x="532.0270270270271" y="455.0" fill="black" transform="rotate(-90 532.0270270270271 455.0)" font-family="Verdana" font-size="10" text-anchor="end">413.0 m</text>
+  <circle cx="789.7297297297297" cy="285.4237288135593" r="4" fill="red" />
+  <text x="789.7297297297297" y="273.4237288135593" fill="black" font-family="Verdana" font-size="12" text-anchor="middle">Paso de Olinches</text>
+  <text x="794.7297297297297" y="300.4237288135593" fill="black" transform="rotate(-90 794.7297297297297 300.4237288135593)" font-family="Verdana" font-size="10" text-anchor="end">437.0 m</text>
+  <circle cx="1140.0" cy="394.91525423728814" r="4" fill="red" />
+  <text x="1140.0" y="382.91525423728814" fill="black" font-family="Verdana" font-size="12" text-anchor="middle">Molino Puerto</text>
+  <text x="1145.0" y="409.91525423728814" fill="black" transform="rotate(-90 1145.0 409.91525423728814)" font-family="Verdana" font-size="10" text-anchor="end">420.0 m</text>
+  <text x="600.0" y="30" font-family="Verdana" font-size="20" text-anchor="middle">Ruta del Agua de Chelva</text>
+  <text x="70" y="50" font-family="Verdana" font-size="14" text-anchor="start">Max: 472.0 m</text>
+  <text x="70" y="470" font-family="Verdana" font-size="14" text-anchor="start">Min: 413.0 m</text>
+  <text x="600.0" y="490" font-family="Verdana" font-size="14" text-anchor="middle">Distancia Total: 3700.00 m</text>
+</svg>

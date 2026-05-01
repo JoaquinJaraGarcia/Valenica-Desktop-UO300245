@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+    <name>Ruta del Agua de Chelva</name>
+    <Placemark>
+        <LineString>
+            <extrude>1</extrude>
+            <tessellate>1</tessellate>
+            <coordinates>
+-0.9992154,39.7479258,445
+-1.0058809,39.7461166,472
+-1.0094426,39.7461166,413
+-1.0095775,39.7470936,437
+-0.9985,39.7460,420
+            </coordinates>
+        </LineString>
+    </Placemark>
+</Document>
+</kml>
