@@ -47,9 +47,9 @@ class Noticias {
 
 
     mostrarNoticias(noticias) {
+        const $h2 = $("<h2>").text("Noticias relacionadas con " + this.busqueda);
+        this.contenedor.append($h2); // Agrega el título solo una vez, antes de la primera noticia
         noticias.forEach(noticia => {
-            const $h2 = $("<h2>").text("Noticias relacionadas con " + this.busqueda);
-            this.contenedor.append($h2); // Agrega el título solo una vez, antes de la primera noticia
             const $articulo = $("<article>");
             const $titulo = $("<h3>").text(noticia.titulo);
             const $entradilla = $("<p>").text(noticia.entradilla);

@@ -62,6 +62,13 @@ main {
     /* Advertencia W3C: Color y background heredados de body */
     border-top: 4px solid #003366;
 }
+/* Especificidad: 0,0,1 */
+section {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-top: 4px solid #ff6600;
+}
 
 /* Especificidad: 0,0,2 */
 main h2 {
@@ -97,6 +104,7 @@ table {
 
 /* Especificidad: 0,0,2 */
 table th {
+    
     background-color: #003366;
     color: #ffffff;
     border: 1px solid #002244;

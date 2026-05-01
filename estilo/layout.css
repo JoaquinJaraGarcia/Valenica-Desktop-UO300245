@@ -50,12 +50,8 @@ main {
 
 /* Especificidad: 0,0,1 */
 section{
-    background-color: #ffffff;
     padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-top: 4px solid #ff6600;
-    
+    overflow-x:auto;
 }
 /* Especificidad: 0,0,1 */
 form {
@@ -72,17 +68,28 @@ table th, table td {
     padding: 12px;
     text-align: left;
 }
-
+/* Especificidad: 0,0,3 */
 main section article {
     width: 100%;
     box-sizing: border-box;
     overflow-wrap: break-word;
 }
-
+/* Especificidad: 0,0,6 */
 main section article ul li a {
     word-break: break-all; 
 }
+/* Especificidad: 0,0,4 */
+main section iframe, 
+main section object,
+main section embed {
+    max-width: 100%;
+    height: auto;
+}
 
+/* Especificidad: 0,0,2 */
+main section {
+    overflow-x: auto;
+}
 
 /* Media Query para pantallas a partir de 768px (Tablets y Escritorio) */
 @media (min-width: 768px) {
@@ -100,7 +107,7 @@ main section article ul li a {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* Especificidad: 0,0,2 */
+    /* Especificidad: 0,1,2 */
     main section:first-of-type {
         grid-column: 1 / -1;
     }
