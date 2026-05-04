@@ -121,6 +121,12 @@ table td {
     border: 1px solid #cccccc;
 }
 
+article section figure video {
+    width: 100%;            /* Ocupará el 100% de su contenedor... */
+    max-width: 400px;       /* ...pero nunca pasará de 400px de ancho */
+    height: auto;           /* Mantiene la proporción original para no deformarse */
+    border-radius: 8px;     /* Opcional: le da unos bordes redondeados más estéticos */
+}
 
 /* Especificidad: 0,1,1 */
 a.activo {

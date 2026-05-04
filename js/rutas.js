@@ -69,6 +69,55 @@ class GestorRutas {
             self.cargarArchivoSecundario(archivoSVG, figuraSVG[0], 'svg');
 
             $(self.contenedorRutas).append(articulo);
+
+            let hitos = $("hitos > hito", this);
+if (hitos.length > 0) {
+    articulo.append($("<h4>").text("Hitos de la Ruta"));
+    
+    hitos.each(function (idx) {
+        let seccionHito = $("<section>");
+        let nombreHito = $("nombreHito", this).text();
+        
+        seccionHito.append($("<h5>").text(`${idx + 1}. ${nombreHito}`));
+        seccionHito.append($("<p>").text($("descripcionHito", this).text()));
+        
+        let coordHito = $("coordenadasHito", this);
+        seccionHito.append($("<p>").html(`<em>Lon: ${$("longitud", coordHito).text()}, Lat: ${$("latitud", coordHito).text()}, Alt: ${$("altitud", coordHito).text()}m</em>`));
+        seccionHito.append($("<p>").html(`<strong>Distancia desde inicio:</strong> ${$("distancia", this).text()} ${$("distancia", this).attr("unidades")}`));
+        
+        // --- CÓDIGO NUEVO PARA CARGAR IMÁGENES ---
+        let fotos = $("galeriaFotografias > fotografia", this);
+        if (fotos.length > 0) {
+            fotos.each(function () {
+                let archivoFoto = $(this).text(); // ej: "serranos.jpg"
+                let figura = $("<figure>");
+                let img = $("<img>").attr({
+                    src: archivoFoto,
+                    alt: `Imagen de ${nombreHito}`
+                });
+                figura.append(img);
+                seccionHito.append(figura);
+            });
+        }
+
+        // --- CÓDIGO NUEVO PARA CARGAR VÍDEOS ---
+        let videos = $("galeriaVideos > video", this);
+        if (videos.length > 0) {
+            videos.each(function () {
+                let archivoVideo = $(this).text(); // ej: "campanas.mp4"
+                let figura = $("<figure>");
+                let video = $("<video>").attr({
+                    src: archivoVideo,
+                    controls: true // Muestra los botones de play/pausa
+                });
+                figura.append(video);
+                seccionHito.append(figura);
+            });
+        }
+        
+        articulo.append(seccionHito);
+    });
+}
         });
     }
     cargarArchivoSecundario(nombreArchivo, nodoDOM, tipo) {
