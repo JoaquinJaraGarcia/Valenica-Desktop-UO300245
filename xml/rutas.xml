@@ -35,7 +35,7 @@
                 </coordenadasHito>
                 <distancia unidades="metros">0</distancia>
                 <galeriaFotografias>
-                    <fotografia>multimedia/serranos.jpg</fotografia>
+                    <fotografia>multimedia/serranos.JPG</fotografia>
                 </galeriaFotografias>
             </hito>
             <hito>
@@ -48,7 +48,7 @@
                 </coordenadasHito>
                 <distancia unidades="metros">350</distancia>
                 <galeriaFotografias>
-                    <fotografia>multimedia/plaza_virgen.jpg</fotografia>
+                    <fotografia>multimedia/plaza_virgen.JPG</fotografia>
                 </galeriaFotografias>
             </hito>
             <hito>
@@ -61,7 +61,7 @@
                 </coordenadasHito>
                 <distancia unidades="metros">150</distancia>
                 <galeriaFotografias>
-                    <fotografia>multimedia/catedral.jpg</fotografia>
+                    <fotografia>multimedia/catedral.JPG</fotografia>
                 </galeriaFotografias>
                 <galeriaVideos>
                     <video>multimedia/campanas.mp4</video>
@@ -77,8 +77,8 @@
                 </coordenadasHito>
                 <distancia unidades="metros">400</distancia>
                 <galeriaFotografias>
-                    <fotografia>multimedia/lonja_exterior.jpg</fotografia>
-                    <fotografia>multimedia/salon_columnas.jpg</fotografia>
+                    <fotografia>multimedia/lonja_exterior.JPG</fotografia>
+                    <fotografia>multimedia/salon_columnas.JPG</fotografia>
                 </galeriaFotografias>
             </hito>
             <hito>
@@ -91,7 +91,7 @@
                 </coordenadasHito>
                 <distancia unidades="metros">200</distancia>
                 <galeriaFotografias>
-                    <fotografia>multimedia/mercado_cupula.jpg</fotografia>
+                    <fotografia>multimedia/mercado_cupula.JPG</fotografia>
                 </galeriaFotografias>
             </hito>
         </hitos>
@@ -131,7 +131,7 @@
                 </coordenadasHito>
                 <distancia unidades="kilometros">1.5</distancia>
                 <galeriaFotografias>
-                    <fotografia>multimedia/dehesa.jpg</fotografia>
+                    <fotografia>multimedia/dehesa.JPG</fotografia>
                 </galeriaFotografias>
             </hito>
             <hito>
@@ -144,7 +144,7 @@
                 </coordenadasHito>
                 <distancia unidades="kilometros">3</distancia>
                 <galeriaFotografias>
-                    <fotografia>multimedia/gola_pujol.jpg</fotografia>
+                    <fotografia>multimedia/gola_pujol.JPG</fotografia>
                 </galeriaFotografias>
             </hito>
             <hito>
@@ -157,7 +157,7 @@
                 </coordenadasHito>
                 <distancia unidades="kilometros">2.5</distancia>
                 <galeriaFotografias>
-                    <fotografia>multimedia/mirador.jpg</fotografia>
+                    <fotografia>multimedia/mirador.JPG</fotografia>
                 </galeriaFotografias>
                 <galeriaVideos>
                     <video>multimedia/atardecer.mp4</video>
@@ -173,7 +173,7 @@
                 </coordenadasHito>
                 <distancia unidades="kilometros">4</distancia>
                 <galeriaFotografias>
-                    <fotografia>multimedia/palmar.jpg</fotografia>
+                    <fotografia>multimedia/palmar.JPG</fotografia>
                 </galeriaFotografias>
             </hito>
             <hito>
@@ -186,7 +186,7 @@
                 </coordenadasHito>
                 <distancia unidades="metros">500</distancia>
                 <galeriaFotografias>
-                    <fotografia>multimedia/barraca.jpg</fotografia>
+                    <fotografia>multimedia/barraca.JPG</fotografia>
                 </galeriaFotografias>
             </hito>
         </hitos>
@@ -228,7 +228,7 @@
                 </coordenadasHito>
                 <distancia unidades="metros">200</distancia>
                 <galeriaFotografias>
-                    <fotografia>multimedia/barrio_arabe.jpg</fotografia>
+                    <fotografia>multimedia/barrio_arabe.JPG</fotografia>
                 </galeriaFotografias>
             </hito>
             <hito>
@@ -241,7 +241,7 @@
                 </coordenadasHito>
                 <distancia unidades="metros">800</distancia>
                 <galeriaFotografias>
-                    <fotografia>multimedia/fuente_cuco.jpg</fotografia>
+                    <fotografia>multimedia/fuente_cuco.JPG</fotografia>
                 </galeriaFotografias>
             </hito>
             <hito>
@@ -254,7 +254,7 @@
                 </coordenadasHito>
                 <distancia unidades="metros">600</distancia>
                 <galeriaFotografias>
-                    <fotografia>multimedia/playeta.jpg</fotografia>
+                    <fotografia>multimedia/playeta.JPG</fotografia>
                 </galeriaFotografias>
                 <galeriaVideos>
                     <video>multimedia/molino.mp4</video>
@@ -270,7 +270,7 @@
                 </coordenadasHito>
                 <distancia unidades="metros">900</distancia>
                 <galeriaFotografias>
-                    <fotografia>multimedia/tunel_olinches.jpg</fotografia>
+                    <fotografia>multimedia/tunel_olinches.JPG</fotografia>
                 </galeriaFotografias>
             </hito>
             <hito>
@@ -283,7 +283,7 @@
                 </coordenadasHito>
                 <distancia unidades="kilometros">1.2</distancia>
                 <galeriaFotografias>
-                    <fotografia>multimedia/molino.jpg</fotografia>
+                    <fotografia>multimedia/molino.JPG</fotografia>
                 </galeriaFotografias>
             </hito>
         </hitos>
