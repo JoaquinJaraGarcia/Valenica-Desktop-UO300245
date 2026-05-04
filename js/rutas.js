@@ -89,7 +89,8 @@ if (hitos.length > 0) {
         let fotos = $("galeriaFotografias > fotografia", this);
         if (fotos.length > 0) {
             fotos.each(function () {
-                let archivoFoto = $(this).text(); // ej: "serranos.jpg"
+                let textoFoto = $(this).text().trim();
+                let archivoFoto = "./" + textoFoto.replace(/^(\.\.\/|\/)/, '');
                 let figura = $("<figure>");
                 let img = $("<img>").attr({
                     src: archivoFoto,
@@ -104,7 +105,8 @@ if (hitos.length > 0) {
         let videos = $("galeriaVideos > video", this);
         if (videos.length > 0) {
             videos.each(function () {
-                let archivoVideo = $(this).text(); // ej: "campanas.mp4"
+                let textoVideo = $(this).text().trim();
+                let archivoVideo = "./" + textoVideo.replace(/^(\.\.\/|\/)/, '');
                 let figura = $("<figure>");
                 let video = $("<video>").attr({
                     src: archivoVideo,
@@ -206,7 +208,7 @@ if (hitos.length > 0) {
                 mapa.fitBounds(limites);
 
             } else {
-                alert("⚠️ El archivo se leyó, pero los números de las coordenadas no son válidos.");
+                alert("El archivo se leyó, pero los números de las coordenadas no son válidos.");
             }
         } catch (error) {
             alert("Error crítico de JavaScript al procesar el archivo KML. Revisa la consola (F12).");
