@@ -59,17 +59,11 @@ class Controlador {
         $nombre    = trim($_POST['nombre']    ?? '');
         $apellidos = trim($_POST['apellidos'] ?? '');
         $email     = trim($_POST['email']     ?? '');
-        $telefono  = trim($_POST['telefono']  ?? '');
         $password  = $_POST['password']       ?? '';
         $password2 = $_POST['password2']      ?? '';
 
-        if (empty($nombre) || empty($apellidos) || empty($email) || empty($telefono) || empty($password)) {
+        if (empty($nombre) || empty($apellidos) || empty($email) || empty($password)) {
             $this->mensajeError = 'Todos los campos son obligatorios.';
-            return;
-        }
-
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $this->mensajeError = 'El formato del correo electronico no es valido.';
             return;
         }
 
@@ -83,7 +77,7 @@ class Controlador {
             return;
         }
 
-        $resultado = Usuario::registrar($nombre, $apellidos, $email, $telefono, $password);
+        $resultado = Usuario::registrar($nombre, $apellidos, $email, $password);
 
         if ($resultado === true) {
             $this->mensajeExito = 'Registro completado. Ya puedes iniciar sesion.';
