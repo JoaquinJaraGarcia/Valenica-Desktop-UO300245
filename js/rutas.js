@@ -90,7 +90,7 @@ if (hitos.length > 0) {
         if (fotos.length > 0) {
             fotos.each(function () {
                 let textoFoto = $(this).text().trim();
-                let archivoFoto = "./" + textoFoto.replace(/^(\.\.\/|\/)/, '');
+                let archivoFoto = "./" + textoFoto.replace(/^(\.\.\/|\/)/, '').replace(/\.JPG$/i, '.jpg');
                 let figura = $("<figure>");
                 let img = $("<img>").attr({
                     src: archivoFoto,
