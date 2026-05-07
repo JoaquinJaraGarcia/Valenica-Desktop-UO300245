@@ -44,12 +44,12 @@ class Controlador {
     }
 
     private function accionInicio(): void {
-        $this->breadcrumb = '<a href="index.html">INICIO</a> >> <strong>Reservas</strong>';
+        $this->breadcrumb = '<a href="index.html">INICIO</a> &gt;&gt; <strong>Reservas</strong>';
         $this->recursos   = Recurso::obtenerTodos();
     }
 
     private function accionRegistro(): void {
-        $this->breadcrumb   = '<a href="index.html">INICIO</a> >> <a href="reservas.php">Reservas</a> >> <strong>Registro</strong>';
+        $this->breadcrumb   = '<a href="index.html">INICIO</a> &gt;&gt; <a href="reservas.php">Reservas</a> &gt;&gt; <strong>Registro</strong>';
         $this->tituloPagina = 'Registro | Turismo Valencia';
 
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -59,14 +59,19 @@ class Controlador {
         $nombre    = trim($_POST['nombre']    ?? '');
         $apellidos = trim($_POST['apellidos'] ?? '');
         $email     = trim($_POST['email']     ?? '');
+        $telefono  = trim($_POST['telefono']  ?? '');
         $password  = $_POST['password']       ?? '';
         $password2 = $_POST['password2']      ?? '';
 
-        if (empty($nombre) || empty($apellidos) || empty($email) || empty($password)) {
+        if (empty($nombre) || empty($apellidos) || empty($email) || empty($telefono) || empty($password)) {
             $this->mensajeError = 'Todos los campos son obligatorios.';
             return;
         }
 
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $this->mensajeError = 'El formato del correo electronico no es valido.';
+            return;
+        }
 
         if (strlen($password) < 6) {
             $this->mensajeError = 'La contrasena debe tener al menos 6 caracteres.';
@@ -78,19 +83,19 @@ class Controlador {
             return;
         }
 
-        $resultado = Usuario::registrar($nombre, $apellidos, $email, $password);
+        $resultado = Usuario::registrar($nombre, $apellidos, $email, $telefono, $password);
 
         if ($resultado === true) {
             $this->mensajeExito = 'Registro completado. Ya puedes iniciar sesion.';
             $this->accion       = 'login';
-            $this->breadcrumb   = '<a href="index.html">INICIO</a> >> <a href="reservas.php">Reservas</a> >> <strong>Acceder</strong>';
+            $this->breadcrumb   = '<a href="index.html">INICIO</a> &gt;&gt; <a href="reservas.php">Reservas</a> &gt;&gt; <strong>Acceder</strong>';
         } else {
             $this->mensajeError = $resultado;
         }
     }
 
     private function accionLogin(): void {
-        $this->breadcrumb   = '<a href="index.html">INICIO</a> >> <a href="reservas.php">Reservas</a> >> <strong>Acceder</strong>';
+        $this->breadcrumb   = '<a href="index.html">INICIO</a> &gt;&gt; <a href="reservas.php">Reservas</a> &gt;&gt; <strong>Acceder</strong>';
         $this->tituloPagina = 'Acceder | Turismo Valencia';
 
         if ($this->usuarioId !== null) {
@@ -136,25 +141,25 @@ class Controlador {
     private function accionDetalle(): void {
         $id            = (int)($_GET['id'] ?? 0);
         $this->recurso = Recurso::obtenerPorId($id);
-        $this->breadcrumb   = '<a href="index.html">INICIO</a> >> <a href="reservas.php">Reservas</a> >> <strong>Detalle del recurso</strong>';
+        $this->breadcrumb   = '<a href="index.html">INICIO</a> &gt;&gt; <a href="reservas.php">Reservas</a> &gt;&gt; <strong>Detalle del recurso</strong>';
         $this->tituloPagina = 'Detalle | Turismo Valencia';
 
         if ($this->recurso === null) {
             $this->mensajeError = 'El recurso solicitado no existe.';
             $this->accion       = 'inicio';
             $this->recursos     = Recurso::obtenerTodos();
-            $this->breadcrumb   = '<a href="index.html">INICIO</a> >> <strong>Reservas</strong>';
+            $this->breadcrumb   = '<a href="index.html">INICIO</a> &gt;&gt; <strong>Reservas</strong>';
         }
     }
 
     private function accionGenerarPresupuesto(): void {
-        $this->breadcrumb   = '<a href="index.html">INICIO</a> >> <a href="reservas.php">Reservas</a> >> <strong>Presupuesto</strong>';
+        $this->breadcrumb   = '<a href="index.html">INICIO</a> &gt;&gt; <a href="reservas.php">Reservas</a> &gt;&gt; <strong>Presupuesto</strong>';
         $this->tituloPagina = 'Presupuesto | Turismo Valencia';
 
         if ($this->usuarioId === null) {
             $this->mensajeError = 'Debes iniciar sesion para generar un presupuesto.';
             $this->accion       = 'login';
-            $this->breadcrumb   = '<a href="index.html">INICIO</a> >> <a href="reservas.php">Reservas</a> >> <strong>Acceder</strong>';
+            $this->breadcrumb   = '<a href="index.html">INICIO</a> &gt;&gt; <a href="reservas.php">Reservas</a> &gt;&gt; <strong>Acceder</strong>';
             return;
         }
 
@@ -172,7 +177,7 @@ class Controlador {
             $this->mensajeError = 'Datos del formulario no validos.';
             $this->accion       = 'inicio';
             $this->recursos     = Recurso::obtenerTodos();
-            $this->breadcrumb   = '<a href="index.html">INICIO</a> >> <strong>Reservas</strong>';
+            $this->breadcrumb   = '<a href="index.html">INICIO</a> &gt;&gt; <strong>Reservas</strong>';
             return;
         }
 
@@ -180,7 +185,7 @@ class Controlador {
             $this->mensajeError = 'No hay suficientes plazas disponibles.';
             $this->accion       = 'detalle';
             $this->recurso      = $recurso;
-            $this->breadcrumb   = '<a href="index.html">INICIO</a> >> <a href="reservas.php">Reservas</a> >> <strong>Detalle del recurso</strong>';
+            $this->breadcrumb   = '<a href="index.html">INICIO</a> &gt;&gt; <a href="reservas.php">Reservas</a> &gt;&gt; <strong>Detalle del recurso</strong>';
             return;
         }
 
@@ -190,7 +195,7 @@ class Controlador {
             $this->mensajeError = 'Error al generar el presupuesto. Intentalo de nuevo.';
             $this->accion       = 'detalle';
             $this->recurso      = $recurso;
-            $this->breadcrumb   = '<a href="index.html">INICIO</a> >> <a href="reservas.php">Reservas</a> >> <strong>Detalle del recurso</strong>';
+            $this->breadcrumb   = '<a href="index.html">INICIO</a> &gt;&gt; <a href="reservas.php">Reservas</a> &gt;&gt; <strong>Detalle del recurso</strong>';
             return;
         }
 
@@ -199,7 +204,7 @@ class Controlador {
     }
 
     private function accionConfirmarReserva(): void {
-        $this->breadcrumb   = '<a href="index.html">INICIO</a> >> <a href="reservas.php">Reservas</a> >> <strong>Confirmacion</strong>';
+        $this->breadcrumb   = '<a href="index.html">INICIO</a> &gt;&gt; <a href="reservas.php">Reservas</a> &gt;&gt; <strong>Confirmacion</strong>';
         $this->tituloPagina = 'Reserva confirmada | Turismo Valencia';
 
         if ($this->usuarioId === null) {
@@ -218,21 +223,21 @@ class Controlador {
             $this->mensajeError = 'Datos del formulario no validos.';
             $this->accion       = 'inicio';
             $this->recursos     = Recurso::obtenerTodos();
-            $this->breadcrumb   = '<a href="index.html">INICIO</a> >> <strong>Reservas</strong>';
+            $this->breadcrumb   = '<a href="index.html">INICIO</a> &gt;&gt; <strong>Reservas</strong>';
             return;
         }
 
         $resultado = Reserva::confirmar($presupuestoId, $this->usuarioId);
 
         if ($resultado === true) {
-            $this->mensajeExito = 'Reserva confirmada con exito. Puedes consultarla en Mis reservas.';
+            $this->mensajeExito = '¡Reserva procesada correctamente!';
         } else {
             $this->mensajeError = $resultado;
         }
     }
 
     private function accionMisReservas(): void {
-        $this->breadcrumb   = '<a href="index.html">INICIO</a> >> <a href="reservas.php">Reservas</a> >> <strong>Mis reservas</strong>';
+        $this->breadcrumb   = '<a href="index.html">INICIO</a> &gt;&gt; <a href="reservas.php">Reservas</a> &gt;&gt; <strong>Mis reservas</strong>';
         $this->tituloPagina = 'Mis reservas | Turismo Valencia';
 
         if ($this->usuarioId === null) {
@@ -259,7 +264,7 @@ class Controlador {
 
         $this->accion     = 'mis_reservas';
         $this->reservas   = Reserva::obtenerPorUsuario($this->usuarioId);
-        $this->breadcrumb = '<a href="index.html">INICIO</a> >> <a href="reservas.php">Reservas</a> >> <strong>Mis reservas</strong>';
+        $this->breadcrumb = '<a href="index.html">INICIO</a> &gt;&gt; <a href="reservas.php">Reservas</a> &gt;&gt; <strong>Mis reservas</strong>';
         $this->tituloPagina = 'Mis reservas | Turismo Valencia';
 
         if ($resultado === true) {
@@ -267,6 +272,37 @@ class Controlador {
         } else {
             $this->mensajeError = $resultado;
         }
+    }
+
+    // --- Helper para las migas de navegación de fases ---
+    private function mostrarPasosReserva(int $pasoActivo): void {
+        $pasos = [
+            1 => 'Registro',
+            2 => 'Recurso',
+            3 => 'Personas',
+            4 => 'Presupuesto',
+            5 => 'Confirmación'
+        ];
+?>
+    <section>
+        <h2>Fase de la reserva</h2>
+        <p>
+            <?php
+            $total = count($pasos);
+            foreach ($pasos as $num => $nombre) {
+                if ($num === $pasoActivo) {
+                    echo "<strong>{$num}. {$nombre}</strong>";
+                } else {
+                    echo "{$num}. {$nombre}";
+                }
+                if ($num < $total) {
+                    echo ' &rarr; ';
+                }
+            }
+            ?>
+        </p>
+    </section>
+<?php
     }
 
     private function renderizarPagina(): void {
@@ -281,35 +317,42 @@ class Controlador {
     <meta charset="UTF-8">
     <meta name="author" content="Joaquin Jara Garcia UO300245">
     <meta name="description" content="Central de reservas de recursos turisticos de Valencia">
-    <meta name="keywords" content="reservas, turismo, valencia, actividades, rutas">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="Reserva, ruta, presupuesto, valencia" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="text/css" href="multimedia/favicon.PNG" />
     <title><?= $titulo ?></title>
     <link rel="stylesheet" href="estilo/estilo.css">
     <link rel="stylesheet" href="estilo/layout.css">
 </head>
 <body>
-  <header>
-     <h1><a href="index.html">Turismo Valencia</a></h1>
-  <nav>
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="gastronomia.html">Gastronomía</a></li>
-      <li><a href="rutas.html">Rutas</a></li>
-      <li><a href="meteorologia.html">Meteorología</a></li>
-      <li><a href="juego.html">Juego</a></li>
-      <li><a href="reservas.php" class="activo">Reservas</a></li>
-      <li><a href="ayuda.html">Ayuda</a></li>
-    </ul>
-  </nav>
+<header>
+    <h1><a href="index.html">Turismo Valencia</a></h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="gastronomia.html">Gastronomía</a></li>
+            <li><a href="rutas.html">Rutas</a></li>
+            <li><a href="meteorologia.html">Meteorología</a></li>
+            <li><a href="juego.html">Juego</a></li>
+            <li><a href="reservas.php">Reservas</a></li>
+            <li><a href="ayuda.html">Ayuda</a></li>
+        </ul>
+    </nav>
 </header>
- <p>Estas en: <?= $breadcrumb ?></p>
+<p>Estas en: <?= $breadcrumb ?></p>
 <main>
 
     <?php if ($msgExito): ?>
-        <p><strong>Aviso:</strong> <?= htmlspecialchars($msgExito) ?></p>
+        <section>
+            <h2>Operación exitosa</h2>
+            <p><?= htmlspecialchars($msgExito) ?></p>
+        </section>
     <?php endif; ?>
     <?php if ($msgError): ?>
-        <p><strong>Error:</strong> <?= htmlspecialchars($msgError) ?></p>
+        <section>
+            <h2>Error detectado</h2>
+            <p><?= htmlspecialchars($msgError) ?></p>
+        </section>
     <?php endif; ?>
 
     <?php
@@ -332,9 +375,12 @@ class Controlador {
     private function vistaInicio(): void {
         $logueado   = $this->usuarioId !== null;
         $nombreUser = htmlspecialchars($this->usuarioNombre ?? '');
+
+        // Mostrar fase 2 (Recurso)
+        $this->mostrarPasosReserva(2);
 ?>
     <section>
-        <h2>Central de Reservas Turisticas de Valencia</h2>
+        <h2>Área de usuario</h2>
         <?php if ($logueado): ?>
             <p>Bienvenido/a, <strong><?= $nombreUser ?></strong>. |
                <a href="reservas.php?accion=mis_reservas">Ver mis reservas</a> |
@@ -396,6 +442,8 @@ class Controlador {
     }
 
     private function vistaRegistro(): void {
+        // Mostrar fase 1 (Registro)
+        $this->mostrarPasosReserva(1);
 ?>
     <section>
         <h2>Crear cuenta</h2>
@@ -431,6 +479,8 @@ class Controlador {
     }
 
     private function vistaLogin(): void {
+        // Mostrar fase 1 (Registro)
+        $this->mostrarPasosReserva(1);
 ?>
     <section>
         <h2>Iniciar sesion</h2>
@@ -458,6 +508,13 @@ class Controlador {
         $logueado = $this->usuarioId !== null;
 
         if ($r === null) return;
+
+        // Fase dinámica: Si está logueado y hay hueco, está en Personas. Si no, solo viendo Recurso.
+        if ($logueado && $r->tieneDisponibilidad()) {
+            $this->mostrarPasosReserva(3);
+        } else {
+            $this->mostrarPasosReserva(2);
+        }
 ?>
     <section>
         <h2><?= htmlspecialchars($r->getNombre()) ?></h2>
@@ -492,11 +549,15 @@ class Controlador {
 
     <?php if (!$r->tieneDisponibilidad()): ?>
     <section>
-        <p>Este recurso no tiene plazas disponibles.</p>
+        <h2>Estado de plazas</h2>
+        <p>Este recurso no tiene plazas disponibles actualmente.</p>
     </section>
     <?php elseif (!$logueado): ?>
+    <section>
+        <h2>Reserva de plazas</h2>
         <p>Debes <a href="reservas.php?accion=login">iniciar sesion</a> o
            <a href="reservas.php?accion=registro">registrarte</a> para reservar.</p>
+    </section>
     <?php else: ?>
     <section>
         <h2>Generar presupuesto</h2>
@@ -513,7 +574,11 @@ class Controlador {
         </form>
     </section>
     <?php endif; ?>
-    <p><a href="reservas.php">&laquo; Volver al listado</a></p>
+    
+    <section>
+        <h2>Opciones adicionales</h2>
+        <p><a href="reservas.php">&laquo; Volver al listado</a></p>
+    </section>
 <?php
     }
 
@@ -522,6 +587,9 @@ class Controlador {
         $r    = $this->recurso;
 
         if ($pres === null || $r === null) return;
+        
+        // Mostrar fase 4 (Presupuesto)
+        $this->mostrarPasosReserva(4);
 ?>
     <section>
         <h2>Resumen del presupuesto</h2>
@@ -560,10 +628,7 @@ class Controlador {
                 </tr>
             </tbody>
         </table>
-    </section>
-
-    <section>
-        <h2>Confirmar reserva</h2>  
+        
         <form method="post" action="reservas.php?accion=confirmar_reserva">
             <input type="hidden" name="presupuesto_id" value="<?= $pres->getId() ?>">
             <p>
@@ -576,12 +641,20 @@ class Controlador {
     }
 
     private function vistaConfirmacion(): void {
+        // Mostrar fase 5 (Confirmación)
+        $this->mostrarPasosReserva(5);
 ?>
     <section>
         <h2>Estado de la reserva</h2>
+        
         <?php if ($this->mensajeExito): ?>
-            <p>Consulta el detalle en <a href="reservas.php?accion=mis_reservas">Mis reservas</a>.</p>
+            <p><strong>Éxito:</strong> <?= htmlspecialchars($this->mensajeExito) ?></p>
+            <ul>
+                <li>Tu plaza ha quedado bloqueada de forma oficial.</li>
+                <li>Puedes consultar todos los detalles o anularla desde el panel de <a href="reservas.php?accion=mis_reservas">Mis reservas</a>.</li>
+            </ul>
         <?php endif; ?>
+
         <p><a href="reservas.php">&laquo; Volver al listado de recursos</a></p>
     </section>
 <?php
@@ -636,7 +709,11 @@ class Controlador {
             </table>
         <?php endif; ?>
     </section>
-    <p><a href="reservas.php">&laquo; Volver al listado</a></p>
+    
+    <section>
+        <h2>Opciones adicionales</h2>
+        <p><a href="reservas.php">&laquo; Volver al listado</a></p>
+    </section>
 <?php
     }
 }
