@@ -1,16 +1,56 @@
 class JuegoTrivial {
     constructor() {
         this.questions = [
-            { q: "¿Cuál es el parque natural famoso cerca de Valencia que ofrecemos en nuestras rutas?", o: ["Doñana", "Albufera", "Picos de Europa", "Teide", "Garajonay"], a: 1 },
-            { q: "¿Qué plato típico es nuestra especialidad en los tours gastronómicos?", o: ["Cocido", "Gazpacho", "Paella valenciana", "Fabada", "Tortilla"], a: 2 },
-            { q: "¿En qué mes se celebran las Fallas, nuestro paquete estrella?", o: ["Enero", "Julio", "Agosto", "Marzo", "Diciembre"], a: 3 },
-            { q: "¿Qué famoso complejo arquitectónico visitamos en el tour cultural?", o: ["Alhambra", "Sagrada Familia", "Ciudad de las Artes y las Ciencias", "Guggenheim", "Mezquita"], a: 2 },
-            { q: "¿Cuál es la playa urbana principal de Valencia incluida en el pack verano?", o: ["Barceloneta", "La Malvarrosa", "Baqueira", "Ses Illetes", "Las Canteras"], a: 1 },
-    { q: "¿Qué edificio histórico es Patrimonio de la Humanidad y visitamos los martes?", o: ["La Lonja de la Seda", "El Escorial", "Catedral de Burgos", "Alcázar", "Acueducto"], a: 0 },
-    { q: "¿Cómo se llama el río cuyo cauce ahora es un gran parque que recorremos en bicicleta?", o: ["Ebro", "Tajo", "Turia", "Guadalquivir", "Duero"], a: 2 },
-    { q: "¿Qué bebida típica valenciana degustamos en el centro histórico?", o: ["Sidra", "Horchata", "Sangría", "Rebujito", "Cava"], a: 1 },
-    { q: "¿Cuál es el barrio marinero donde terminan nuestras rutas guiadas?", o: ["Triana", "Gracia", "El Cabanyal", "Malasaña", "Albaicín"], a: 2 },
-    { q: "¿Cuál es el punto de encuentro para nuestra 'Ruta del Centro Histórico'?", o: ["Plaza Mayor", "Plaza del Sol", "Plaza de la Virgen", "Plaza de España", "Plaza Cataluña"], a: 2 }
+           { 
+                q: "¿En qué lugar exacto comienza la ruta por el Centro Histórico de Valencia?", 
+                o: ["Mercado Central", "Plaza de la Virgen", "Torres de Serranos", "La Lonja de la Seda", "El Miguelete"], 
+                a: 2 
+            },
+            { 
+                q: "Según nuestra ruta, ¿qué edificio es considerado una obra maestra del gótico civil?", 
+                o: ["Catedral de Valencia", "Mercado Central", "La Lonja de la Seda", "Ayuntamiento", "Torres de Serranos"], 
+                a: 2 
+            },
+            { 
+                q: "¿Cuál es el medio de transporte que utilizamos en la ruta por el Parque Natural de L'Albufera?", 
+                o: ["A pie", "Autobús", "Coche", "Bicicleta", "Barca tradicional"], 
+                a: 3 
+            },
+            { 
+                q: "¿Cómo se llama el pueblo tradicional de pescadores y arroceros que visitamos en L'Albufera?", 
+                o: ["El Saler", "El Palmar", "Chelva", "Benacacira", "Pujol"], 
+                a: 1 
+            },
+            { 
+                q: "¿Qué nombre recibe la vivienda histórica de la huerta valenciana que vemos en la ruta de L'Albufera?", 
+                o: ["Masía", "Cortijo", "Barraca", "Cabaña", "Alquería"], 
+                a: 2 
+            },
+            { 
+                q: "¿Qué agencia organiza la ruta de 1 día de duración por el Parque Natural de L'Albufera?", 
+                o: ["Valencia Tours", "Sin agencia", "Turia Viajes", "NaturaTur", "Albufera Express"], 
+                a: 3 
+            },
+            { 
+                q: "¿Cómo se llama el túnel excavado en la roca junto al cauce en la Ruta de Chelva?", 
+                o: ["Gola de Pujol", "Paso de Olinches", "Cueva del Turia", "Túnel del Cuco", "Paso del Molino"], 
+                a: 1 
+            },
+            { 
+                q: "¿Qué barrio de herencia musulmana con calles estrechas visitamos al inicio de la ruta de Chelva?", 
+                o: ["El Carmen", "Ruzafa", "Benacacira", "El Cabanyal", "Benimaclet"], 
+                a: 2 
+            },
+            { 
+                q: "¿Dónde se encuentra la famosa fuente del Turia en nuestra ruta por el corazón de la ciudad?", 
+                o: ["Torres de Serranos", "Mercado Central", "Plaza del Ayuntamiento", "Plaza de la Virgen", "La Lonja"], 
+                a: 3 
+            },
+            { 
+                q: "¿Cómo se llama la zona de baño natural en el río que forma parte de la Ruta del Agua de Chelva?", 
+                o: ["El Palmar", "Gola de Pujol", "La Playeta", "Fuente del Cuco", "Molino Puerto"], 
+                a: 2 
+            }
 ];
 
 this.contenedor = document.querySelector("section ");
